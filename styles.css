@@ -1,0 +1,115 @@
+/* styles.css - Template for Neyhouse Research Group site lookalike */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    background: #FFFFFF;
+    color: #1A1A1A;
+}
+header {
+    background: #00694E; /* Cutler Green */
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 8px rgba(0,105,78,0.08);
+}
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+.nav-links li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.2s, background 0.2s;
+    padding: 0.3rem 1rem;
+    border-radius: 6px;
+}
+.nav-links li a.active, .nav-links li a:hover {
+    background: #E7ECC3; /* Sycamore (light green accent) */
+    color: #00694E;
+}
+.hero {
+    background: #E7ECC3; /* Sycamore */
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    border-bottom: 4px solid #00694E;
+}
+.hero-img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0,105,78,0.10);
+}
+.hero h1 {
+    font-size: 2.2rem;
+    margin: 0.5rem 0 1rem 0;
+    font-weight: 700;
+    color: #00694E;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    color: #1A1A1A;
+}
+.content {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,105,78,0.07);
+    padding: 2rem 2rem 1.5rem 2rem;
+    border: 1.5px solid #00694E;
+}
+.content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    color: #00694E;
+}
+.content-img {
+    display: block;
+    max-width: 350px;
+    width: 100%;
+    margin: 2rem auto 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,105,78,0.10);
+}
+footer {
+    background: #024230; /* Under the Elms */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border-top: 4px solid #E7ECC3;
+}
+footer a {
+    color: #00694E;
+    text-decoration: underline;
+}
+a, a:visited {
+    color: #00694E;
+}
+a:hover {
+    color: #024230;
+}
+@media (max-width: 600px) {
+    .content, nav {
+        padding: 0 0.5rem;
+    }
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+    .content h2 {
+        font-size: 1.1rem;
+    }
+}

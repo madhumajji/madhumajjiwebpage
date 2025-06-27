@@ -1,0 +1,88 @@
+<!-- index.html - Template mimicking https://www.bertrand-neyhouse.com/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neyhouse Research Group</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts: Roboto (as used by Google Sites) -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" class="tab-link active" data-tab="home">Home</a></li>
+                <li><a href="#" class="tab-link" data-tab="people">People</a></li>
+                <li><a href="#" class="tab-link" data-tab="research">Research</a></li>
+                <li><a href="#" class="tab-link" data-tab="publications">Publications</a></li>
+                <li><a href="#" class="tab-link" data-tab="rfb">RFB models</a></li>
+                <li><a href="#" class="tab-link" data-tab="more">More</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="tab-section" style="display:block;">
+            <div class="hero">
+                <img src="https://lh6.googleusercontent.com/a1BGfXaOOQPo-4KFAOX_sFrOU74HU8isxjLvcjf9E6Vcm4J6YwStVNwQ7VUbSuymQ8zf7JJ8mn0-Wu8435FjdzhdPkLW39eLP50l9pQREz-SeqQggDM6Vhrlc_RG_4pg_Qd12gQ2r7Z3KoUvNlmhoKfCIVeulyLn0qMhz9J6P9bo6Y0uVQKwLQ=w1280" alt="Group Photo" class="hero-img">
+                <h1>Welcome to the Neyhouse Research Group at the University of Toronto!</h1>
+                <p>We are electrochemical engineers working to intensify and scale electrochemical processes.</p>
+            </div>
+            <div class="content">
+                <h2>About Our Research</h2>
+                <p>Electrochemistry offers a new paradigm for chemical engineering, as reactions can be performed under mild conditions with renewable electricity. Indeed, a diverse array of electrochemical transformations can be achieved at the lab-scale in batch quantities, however the transition to high throughput, continuous modes of operation requires judicious reactor engineering, sometimes deviating from traditional process design rules. To enable the next generation of sustainable chemical manufacturing, our group leverages fundamental chemical and electrochemical engineering principles to design and intensify electrosynthetic processes.</p>
+                <img src="https://lh6.googleusercontent.com/B33iHIQNMIKpK-qY5qJ2M_sTmV5r9KneSDLO4okvJ_97zFrtN_1lH0FBtRj791OmF3UWF3A20STgrqa_Qz8hs30jkWSMhtV6WhtDSmaRA0usUWZPeFDS6n_GqKRjKst1vB-p5pVaZMvYnXJ7A_MG3FEXCIh_6r0OqRceDlsyZnHcLxmr6DL_Cw=w1280" alt="Lab Photo" class="content-img">
+            </div>
+        </section>
+        <section id="people" class="tab-section" style="display:none;">
+            <div class="content">
+                <h2>People</h2>
+                <p>Meet our team! (Add your group members and bios here.)</p>
+            </div>
+        </section>
+        <section id="research" class="tab-section" style="display:none;">
+            <div class="content">
+                <h2>Research</h2>
+                <p>Learn more about our research projects and focus areas. (Add research details here.)</p>
+            </div>
+        </section>
+        <section id="publications" class="tab-section" style="display:none;">
+            <div class="content">
+                <h2>Publications</h2>
+                <p>Read our latest publications. (Add publication list here.)</p>
+            </div>
+        </section>
+        <section id="rfb" class="tab-section" style="display:none;">
+            <div class="content">
+                <h2>RFB Models</h2>
+                <p>Explore our RFB models. (Add model information here.)</p>
+            </div>
+        </section>
+        <section id="more" class="tab-section" style="display:none;">
+            <div class="content">
+                <h2>More</h2>
+                <p>Additional information and resources. (Add more content here.)</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>University of Toronto Department of Chemical Engineering & Applied Chemistry<br>
+        Bertrand Neyhouse (PI): <a href="mailto:bertrand.neyhouse@utoronto.ca">bertrand.neyhouse@utoronto.ca</a></p>
+    </footer>
+    <script>
+    // Tab switching logic
+    document.querySelectorAll('.tab-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.tab-link').forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            const tab = this.getAttribute('data-tab');
+            document.querySelectorAll('.tab-section').forEach(section => {
+                section.style.display = (section.id === tab) ? 'block' : 'none';
+            });
+        });
+    });
+    </script>
+</body>
+</html>
