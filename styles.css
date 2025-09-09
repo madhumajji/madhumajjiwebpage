@@ -1,118 +1,213 @@
-/* styles.css - Template for Neyhouse Research Group site lookalike */
+/* Ohio University College of Engineering color palette only */
+:root {
+    --ou-green: #00694e;
+    --ou-dark-green: #004d36;
+    --ou-light-green: #e6f2ef;
+    --ou-gold: #bfa14a;
+    --ou-gray: #f5f5f5;
+    --ou-white: #fff;
+}
+
 body {
-    font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
-    background: #FFFFFF;
-    color: #1A1A1A;
+    font-family: 'Roboto', sans-serif;
+    background: var(--ou-gray);
+    color: #222;
 }
-header {
-    background: #00694E;
-    padding: 0.5rem 0;
-    box-shadow: 0 2px 8px rgba(0,105,78,0.08);
-}
-nav {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-.nav-links {
-    list-style: none;
+
+.container {
     display: flex;
-    gap: 2rem;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 0;
+    min-height: 100vh;
+    background: var(--ou-gray);
 }
-.nav-links li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: color 0.2s, background 0.2s;
-    padding: 0.3rem 1rem;
-    border-radius: 6px;
-}
-.nav-links li a.active, .nav-links li a:hover {
-    background: #E7ECC3;
-    color: #00694E;
-}
-.hero {
-    background: #E7ECC3;
-    text-align: center;
+
+.sidebar {
+    width: 260px;
+    background: var(--ou-green);
+    color: var(--ou-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem 1rem 1rem 1rem;
-    border-bottom: 4px solid #00694E;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 1000;
+    box-shadow: 2px 0 8px rgba(0,105,78,0.07);
 }
-.hero-img {
-    max-width: 350px;
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 16px rgba(0,105,78,0.10);
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 2rem;
 }
-.hero h1 {
-    font-size: 2.2rem;
-    margin: 0.5rem 0 1rem 0;
-    font-weight: 700;
-    color: #00694E;
-}
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 0;
-    color: #1A1A1A;
-}
-.content {
-    max-width: 900px;
-    margin: 2rem auto;
-    background: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,105,78,0.07);
-    padding: 2rem 2rem 1.5rem 2rem;
-    border: 1.5px solid #E7ECC3;
-}
-.content h2 {
+
+.sidebar-title {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-top: 0;
-    color: #00694E;
+    margin: 0;
+    color: var(--ou-gold);
 }
-.content h3 {
-    color: #00694E;
+
+.sidebar-subtitle {
+    font-size: 1rem;
+    color: var(--ou-white);
+    margin: 0;
 }
-.content-img {
-    display: block;
-    max-width: 350px;
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    margin: 2rem auto 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0,105,78,0.10);
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
+
+.nav-links li {
+    width: 100%;
+}
+
+.nav-links a {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    color: var(--ou-white);
+    font-weight: 700;
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-links a.active,
+.nav-links a:focus,
+.nav-links a:hover {
+    background: var(--ou-gold);
+    color: var(--ou-dark-green);
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem 2rem 2rem 2rem;
+    background: var(--ou-gray);
+    min-width: 0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,105,78,0.10);
+}
+
+.content-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,105,78,0.10);
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    background: var(--ou-white);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,105,78,0.10);
+    padding: 1.5rem;
+    flex: 1 1 320px;
+    min-width: 280px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card img {
+    width: 100%;
+    max-width: 120px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,105,78,0.10);
+}
+
+.card strong {
+    color: var(--ou-dark-green);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.card span {
+    color: #333;
+    font-size: 1rem;
+}
+
+.publications-list {
+    list-style: none;
+    padding: 0;
+}
+
+.publications-list li {
+    background: var(--ou-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,105,78,0.10);
+    margin-bottom: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    color: #222;
+}
+
 footer {
-    background: #00694E;
-    color: #FFFFFF;
+    background: var(--ou-green);
+    color: var(--ou-white);
     text-align: center;
     padding: 1rem 0;
-    font-size: 1rem;
-    margin-top: 2rem;
-    border-top: 4px solid #E7ECC3;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
-footer a {
-    color: #fff !important;
-    text-decoration: underline;
-}
-a, a:visited {
-    color: #00694E;
-}
-a:hover {
-    color: #024230;
-}
-@media (max-width: 600px) {
-    .content, nav {
-        padding: 0 0.5rem;
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
     }
-    .hero h1 {
-        font-size: 1.3rem;
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: flex-start;
+        position: static;
+        box-shadow: none;
+        padding: 1rem 0;
     }
-    .content h2 {
-        font-size: 1.1rem;
+    .main-content {
+        padding: 1rem;
+    }
+    .nav-links {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .nav-links li {
+        width: auto;
+    }
+    .nav-links a {
+        padding: 0.75rem 1rem;
+        margin-bottom: 0;
+    }
+    .card-list {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
