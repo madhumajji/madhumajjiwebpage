@@ -1,6 +1,3 @@
-# Neyhouse Research Group Template
-
-This project is a static HTML and CSS template that mimics the structure, fonts, and layout of https://www.bertrand-neyhouse.com/.
 
 ## Features
 - Responsive navigation bar
