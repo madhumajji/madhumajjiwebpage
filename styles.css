@@ -93,7 +93,7 @@ footer {
     border-top: 4px solid #E7ECC3;
 }
 footer a {
-    color: #00694E;
+    color: #fff !important;
     text-decoration: underline;
 }
 a, a:visited {
