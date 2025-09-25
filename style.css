@@ -176,6 +176,7 @@ h2 {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
+    flex-wrap: wrap; /* ensures responsiveness on small screens */
 }
 
 .research-text {
@@ -183,18 +184,20 @@ h2 {
     font-size: 1rem;
     color: #444;
     line-height: 1.6;
+    min-width: 200px; /* prevents text from shrinking too much */
 }
 
 .research-image {
     flex: 1;
     display: flex;
     justify-content: center;
+    min-width: 200px; /* keeps right half reasonable on small screens */
 }
 
 .research-image img {
-    width: 100%;      /* take up the full width of the right half */
-    height: auto;     /* maintain original aspect ratio */
-    max-width: 100%;  /* don’t exceed container */
+    max-height: 250px; /* fixed height for all images */
+    width: auto;        /* scale width proportionally */
+    object-fit: contain;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
