@@ -191,7 +191,7 @@ h2 {
     flex: 1;
     display: flex;
     justify-content: center;
-    min-width: 400px; /* keeps right half reasonable on small screens */
+    min-width: 200px; /* keeps right half reasonable on small screens */
 }
 
 .research-image img {
