@@ -159,6 +159,36 @@ h2 {
 .publications-list li:last-child {
     margin-bottom: 0;
 }
+
+/* ==== NEW: Research section ==== */
+.research-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+.research-item {
+    background: #fff;
+    border: 1px solid #E6F2ED;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,105,78,0.06);
+    padding: 1.5rem;
+    text-align: center;
+}
+.research-item p {
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #003C23;
+}
+.research-img {
+    height: 200px;       /* same height for all */
+    width: auto;         /* keep aspect ratio */
+    object-fit: contain; /* ensures no stretching */
+    display: block;
+    margin: 0 auto;
+}
+/* =============================== */
+
 footer {
     background: #00694E; /* primary green */
     border-top: 2px solid #00B67A;
