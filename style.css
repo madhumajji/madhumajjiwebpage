@@ -175,7 +175,7 @@ h2 {
 .research-content {
     display: flex;
     gap: 2rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .research-text {
@@ -192,12 +192,13 @@ h2 {
 }
 
 .research-image img {
-    height: auto;      /* 1/4th of viewport height */
-    width: 33vW;       /* maintain aspect ratio */
-    object-fit: contain;
+    width: 100%;      /* take up the full width of the right half */
+    height: auto;     /* maintain original aspect ratio */
+    max-width: 100%;  /* don’t exceed container */
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 
 /* =============================== */
 
