@@ -192,8 +192,8 @@ h2 {
 }
 
 .research-image img {
-    height: 25vh;      /* 1/4th of viewport height */
-    width: auto;       /* maintain aspect ratio */
+    height: auto;      /* 1/4th of viewport height */
+    width: 33vW;       /* maintain aspect ratio */
     object-fit: contain;
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
