@@ -185,6 +185,7 @@ h2 {
     color: #444;
     line-height: 1.6;
     min-width: 200px; /* prevents text from shrinking too much */
+    text-align: justify; /* ✅ makes text justified */
 }
 
 .research-image {
