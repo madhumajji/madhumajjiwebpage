@@ -244,6 +244,8 @@ footer {
 }
 .person-info {
     flex: 1;
+    text-align: justify; /* ✅ justify text for each person's description */
+
 }
 .teaching-list {
     list-style: none;
@@ -302,6 +304,7 @@ footer {
     justify-content: center;
     min-height: 40vh;
     text-align: center;
+    text-align: justify; /* ✅ justify Join Our Group text */
     gap: 1.5rem;
 }
 .index-flex {
@@ -316,6 +319,8 @@ footer {
 .index-text {
     flex: 1 1 350px;
     min-width: 260px;
+    text-align: justify; /* ✅ justify text on home/index page */
+
 }
 
 .index-image {
