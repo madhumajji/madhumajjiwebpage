@@ -302,7 +302,7 @@ footer {
     text-align: justify;
     text-justify: inter-word;
     -webkit-text-align-last: justify; /* WebKit / Safari */
-    text-align-last: justify;         /* Firefox & Chromium */
+    text-align-last: left;         /* Firefox & Chromium */
 }
 .contact-center {
     display: flex;
