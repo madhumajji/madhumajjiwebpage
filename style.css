@@ -301,7 +301,7 @@ footer {
 .join-content p {
     text-align: justify;
     text-justify: inter-word;
-    -webkit-text-align-last: justify; /* WebKit / Safari */
+    -webkit-text-align-last: left; /* WebKit / Safari */
     text-align-last: left;         /* Firefox & Chromium */
 }
 .contact-center {
