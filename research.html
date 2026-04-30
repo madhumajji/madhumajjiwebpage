@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore ongoing research in slurry electrodes, CO₂ pipeline corrosion, and multiphase flow at the Majji Research Group, Ohio University.">
     <title>Majji Research Group - Research</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 </head>
@@ -11,6 +13,7 @@
     <header>
         <div class="container header-flex">
             <h1>Majji Research Group</h1>
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">&#9776;</button>
             <nav>
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
@@ -34,7 +37,7 @@
                     </p>
                     <div class="research-content">
                         <div class="research-text">
-                            When slurries of conductive particles flow through electrochemical reactors, multiple coupled processes are at play. The reactor performance depends on a vast set of input paraemters related to these processes. We are investigating which set of materials and operating conditions gives raise to optimum reactor performace for applications in energy storage, electrochemical manufacturing and water treatment.
+                            When slurries of conductive particles flow through electrochemical reactors, multiple coupled processes are at play. The reactor performance depends on a vast set of input parameters related to these processes. We are investigating which set of materials and operating conditions gives raise to optimum reactor performance for applications in energy storage, electrochemical manufacturing and water treatment.
                         </div>
                         <div class="research-image">
                             <img src="images/Echemreactor.png" alt="Electrochemical Reactor">
@@ -84,5 +87,10 @@
             </div>
         </div>
     </footer>
+<script>
+    document.getElementById('hamburger-btn').addEventListener('click', function() {
+        document.querySelector('.nav-list').classList.toggle('open');
+    });
+</script>
 </body>
 </html>

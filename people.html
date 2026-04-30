@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the Majji Research Group team — faculty, graduate students, and undergraduate researchers at Ohio University.">
     <title>Majji Research Group - People</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 </head>
@@ -11,6 +13,7 @@
     <header>
         <div class="container header-flex">
             <h1>Majji Research Group</h1>
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">&#9776;</button>
             <nav>
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
@@ -85,7 +88,7 @@
                     <img src="images/emma.png" alt="Emma Vanderbilt" class="person-img">
                     <div class="person-info">
                         <h4>Emma Vanderbilt</h4>
-                        <p>My name is Emma Vanderbilt .I am a current sophomore at Ohio University in chemical engineering from Cleveland Ohio. My interests are aligned with the reduction of pollutants and enhancing sustainable energy production.  I am currently working with the electrochemical system group, preparing experimental materials for the different tests. While also working to understand the outcomes and critically analyze the data to ensure consistency and validity.</p>
+                        <p>My name is Emma Vanderbilt. I am a current sophomore at Ohio University in chemical engineering from Cleveland Ohio. My interests are aligned with the reduction of pollutants and enhancing sustainable energy production.  I am currently working with the electrochemical system group, preparing experimental materials for the different tests. While also working to understand the outcomes and critically analyze the data to ensure consistency and validity.</p>
                     </div>
                 </div>
             </div>
@@ -103,5 +106,10 @@
             </div>
         </div>
     </footer>
+<script>
+    document.getElementById('hamburger-btn').addEventListener('click', function() {
+        document.querySelector('.nav-list').classList.toggle('open');
+    });
+</script>
 </body>
 </html>
