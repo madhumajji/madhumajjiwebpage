@@ -308,6 +308,13 @@ footer {
     color: #fff;
     text-decoration: underline;
 }
+/* Join page: justify paragraph text only (keeps headings as they are) */
+.join-content p {
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-text-align-last: left; /* WebKit / Safari */
+    text-align-last: left;         /* Firefox & Chromium */
+}
 .contact-center {
     display: flex;
     flex-direction: column;
@@ -315,6 +322,7 @@ footer {
     justify-content: center;
     min-height: 40vh;
     text-align: center;
+    text-align: justify; /* ✅ justify Join Our Group text */
     gap: 1.5rem;
 }
 .index-flex {
@@ -329,6 +337,8 @@ footer {
 .index-text {
     flex: 1 1 350px;
     min-width: 260px;
+    text-align: justify; /* ✅ justify text on home/index page */
+
 }
 
 .index-image {
